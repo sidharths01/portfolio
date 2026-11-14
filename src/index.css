@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    @apply bg-surface text-ink antialiased;
+  }
+
+  ::selection {
+    @apply bg-accent-subtle text-ink;
+  }
+
+  /* Show focus only for keyboard — keeps mouse clicks clean */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  :where(a, button, input, textarea, select, summary, [tabindex]:not([tabindex="-1"])):focus-visible {
+    outline: 2px solid #3dffa8;
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .type-meta {
+    @apply font-mono text-xs font-medium tracking-widest text-ink-muted uppercase;
+  }
+
+  .tab-focus {
+    @apply rounded-sm focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-accent;
+  }
+
+  /* Solid accent buttons: light ring for contrast (WCAG focus appearance) */
+  .tab-focus-inverted {
+    @apply rounded-sm focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-ink;
+  }
+}
+
+@layer utilities {
+  .skip-link {
+    @apply sr-only;
+  }
+
+  .skip-link:focus,
+  .skip-link:focus-visible {
+    @apply not-sr-only fixed top-4 left-4 z-[100] rounded-sm border border-grid bg-surface-raised px-4 py-2 text-sm text-ink;
+    outline: 2px solid #3dffa8;
+    outline-offset: 3px;
+  }
+
+  .bg-swiss-grid {
+    background-color: #0a0a0b;
+    background-image:
+      linear-gradient(to right, rgb(42 42 40 / 0.65) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(42 42 40 / 0.65) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: linear-gradient(to bottom, black 20%, transparent 92%);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a28;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3dffa8;
+}
