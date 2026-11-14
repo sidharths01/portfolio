@@ -24,8 +24,8 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-swiss-grid" aria-hidden />
 
       <div className="relative mx-auto w-full max-w-6xl px-5 py-28 sm:px-6 sm:py-32 lg:px-8">
-        <motion.div {...fade} className="grid items-end gap-12 lg:grid-cols-12 lg:gap-8">
-          <div className="lg:col-span-7">
+        <motion.div {...fade} className="grid items-center gap-12 lg:grid-cols-12 lg:items-end lg:gap-8">
+          <div className="order-2 lg:order-none lg:col-span-7">
             <p className="type-meta">
               {personalInfo.subtitle}
             </p>
@@ -80,7 +80,7 @@ export default function Hero() {
             </ul>
           </div>
 
-          <div className="flex justify-center lg:col-span-5 lg:justify-end">
+          <div className="order-1 flex justify-center lg:order-none lg:col-span-5 lg:justify-end">
             <div className="w-full max-w-[260px] sm:max-w-[280px]">
               <p className="type-meta mb-2 text-right">
                 Fig. 01
@@ -96,7 +96,7 @@ export default function Hero() {
                   alt={`Portrait of ${personalInfo.name}`}
                   width={280}
                   height={280}
-                  className="aspect-square w-full object-cover contrast-[1.02] grayscale"
+                  className="aspect-square w-full object-cover contrast-[1.02]"
                 />
               </motion.div>
             </div>

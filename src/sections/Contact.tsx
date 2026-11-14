@@ -17,26 +17,36 @@ export default function Contact() {
       </p>
 
       <div className="mt-10 flex justify-center">
-        <Button href={`mailto:${personalInfo.email}`}>Email {personalInfo.email}</Button>
+        <Button href={`mailto:${personalInfo.email}`}>Email me</Button>
       </div>
 
-      <dl className="mx-auto mt-12 grid max-w-lg gap-4 border border-grid p-6 text-center sm:grid-cols-3 sm:text-left">
-        {contactDetails.map((detail) => (
-          <div key={detail.label}>
-            <dt className="type-meta">
-              {detail.label}
-            </dt>
-            <dd className="mt-1 text-sm">
-              {detail.href ? (
-                <a href={detail.href} className="tab-focus text-ink-muted transition-colors hover:text-accent">
-                  {detail.value}
-                </a>
-              ) : (
-                <span className="text-ink-muted">{detail.value}</span>
-              )}
-            </dd>
-          </div>
-        ))}
+      <dl className="mx-auto mt-12 w-full max-w-sm border-t border-grid pt-8 lg:max-w-3xl lg:grid lg:grid-cols-3 lg:gap-x-12">
+        {contactDetails.map((detail) => {
+          const Icon = detail.icon;
+          return (
+            <div
+              key={detail.label}
+              className="grid gap-2 border-b border-grid py-6 last:border-b-0 lg:min-w-0 lg:border-b-0 lg:py-0 lg:pr-4 last:lg:pr-0"
+            >
+              <dt className="type-meta flex items-center gap-2">
+                <Icon aria-hidden className="size-3.5 shrink-0 text-accent" />
+                {detail.label}
+              </dt>
+              <dd className="text-sm leading-relaxed text-ink sm:text-base">
+                {detail.href ? (
+                  <a
+                    href={detail.href}
+                    className="tab-focus break-words text-ink-muted transition-colors hover:text-accent"
+                  >
+                    {detail.value}
+                  </a>
+                ) : (
+                  <span className="break-words text-ink-muted">{detail.value}</span>
+                )}
+              </dd>
+            </div>
+          );
+        })}
       </dl>
 
       <ul className="mt-10 flex justify-center gap-6 font-mono text-xs">
