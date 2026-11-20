@@ -35,17 +35,17 @@ import type {
 
 export const personalInfo: PersonalInfo = {
   name: "Sidharth S",
-  title: "Frontend Engineer",
+  title: "Full-Stack Engineer",
   subtitle: "Hurix Digital | Chennai",
   location: "Chennai, Tamil Nadu",
   phone: "+91 7358501018",
   email: "sidharthspvt@gmail.com",
   summary:
-    "I build and maintain React applications for Hurix Digital's education products — from real-time course authoring tools to accessibility validation workflows. My work sits at the intersection of component architecture, API integration, and WCAG-minded UI.",
+    "I build and maintain full-stack features for Hurix Digital's education products - React clients, Node-backed services, and the APIs between them. From real-time course authoring to accessibility validation pipelines, I own flows end to end where it matters.",
   aboutDetail:
-    "I studied Electrical & Electronics Engineering at Rajalakshmi Engineering College and moved into frontend engineering through hands-on product work. I care about interfaces that are fast, legible, and usable for more people — not just demos that look good in a screenshot.",
+    "I studied Electrical & Electronics Engineering at Rajalakshmi Engineering College and grew into full-stack product work through shipping real tools, not tutorials. I care about systems that are reliable under load, clear at the API boundary, and still feel fast and accessible in the browser.",
   heroTagline:
-    "Production React for education products — component systems, REST and WebSocket integrations, and accessibility built into the UI from the start.",
+    "End-to-end product work for education platforms - React UIs, Node services, REST and WebSocket integrations, and accessibility from database to pixel.",
   resumeUrl: "/resume.pdf",
 };
 
@@ -137,7 +137,7 @@ export const projects: Project[] = [
     problem:
       "Authors need to create and update course content without page reloads, with UI patterns that stay consistent across a large product surface.",
     contribution:
-      "Frontend engineering on the course management experience: reusable React components, CRUD flows wired to REST APIs, and live updates over WebSockets so editors see changes as they work.",
+      "Full-stack work on the course management experience: React UI and reusable components, REST CRUD integrations, and WebSocket-driven live updates so authors and services stay in sync without reloads.",
     challenges:
       "Keeping state predictable across nested editors and real-time events, while preserving responsive layouts on smaller viewports.",
     highlights: [
@@ -153,7 +153,7 @@ export const projects: Project[] = [
     problem:
       "Instructional games need configurable UIs backed by services that expose game data and configuration through APIs.",
     contribution:
-      "Built responsive React interfaces and integrated backend REST services — focusing on state management, form flows, and layouts that work across devices.",
+      "Delivered the React builder UI and wired it to REST-backed game configuration services - state management, multi-step forms, and API contracts that keep authoring flows consistent across devices.",
     highlights: [
       "API-driven game configuration UI",
       "State management for multi-step builder flows",
@@ -167,7 +167,7 @@ export const projects: Project[] = [
     problem:
       "Manual accessibility audits are slow and inconsistent; teams need automated signals on semantic structure, ARIA usage, and contrast.",
     contribution:
-      "Developed the React and Node tooling that scans pages, surfaces WCAG-oriented issues, and helps engineers fix problems before release — part of a broader quality workflow.",
+      "Built the Node scanning pipeline and React reporting UI that surfaces WCAG-oriented issues and helps teams fix problems before release - one product from service layer to dashboard.",
     challenges:
       "Balancing depth of DOM analysis with clear, actionable reporting in the UI.",
     highlights: [
@@ -183,7 +183,7 @@ export const projects: Project[] = [
     problem:
       "Recruiters needed faster ways to filter and shortlist candidates from large pools.",
     contribution:
-      "Contributed to the React frontend for search, filters, and ranking views — integrating with backend services for real-time query results.",
+      "Owned search and filter flows across the stack: React views, API integration, and real-time result updates backed by Node services.",
     highlights: [
       "Search and filter UI connected to backend APIs",
       "Real-time result updates",
@@ -197,9 +197,9 @@ export const experience: Experience[] = [
     role: "Software Engineer",
     company: "Hurix Digital",
     location: "Chennai",
-    period: "June 2023 — Present",
+    period: "June 2023 - Present",
     intro:
-      "Frontend-focused engineer on education and publishing products — shipping React features with design, QA, and backend teams.",
+      "Full-stack engineer on education and publishing products - shipping React clients, Node services, and the integrations that tie them together.",
     groups: [
       {
         title: "Product UI",
@@ -207,6 +207,14 @@ export const experience: Experience[] = [
           "Ship responsive React features for course and content authoring tools.",
           "Build reusable components so new screens inherit the same interaction patterns.",
           "Work with UI/UX on layout, hierarchy, and handoff from Figma.",
+        ],
+      },
+      {
+        title: "APIs & backend",
+        items: [
+          "Implement and consume REST APIs with Axios; extend flows with WebSockets when live data matters.",
+          "Build and maintain Node tooling for validation, search, and internal workflows.",
+          "Work with MongoDB and service layers so client state maps cleanly to persisted data.",
         ],
       },
       {
@@ -218,10 +226,10 @@ export const experience: Experience[] = [
         ],
       },
       {
-        title: "Integration & performance",
+        title: "Performance & delivery",
         items: [
-          "Connect UIs to REST APIs with Axios; use WebSockets where live updates matter.",
           "Profile rendering and loading behavior on heavy authoring screens.",
+          "Coordinate with QA and backend on releases, contracts, and regression checks.",
         ],
       },
     ],
@@ -233,13 +241,13 @@ export const education: Education[] = [
     degree: "B.E. Electrical & Electronics Engineering",
     institution: "Rajalakshmi Engineering College",
     institutionUrl: "https://www.rajalakshmi.org/about#our-story",
-    period: "2019 — 2023",
+    period: "2019 - 2023",
   },
 ];
 
 export const certifications: Certification[] = [
   {
-    name: "Claude Certified Developer — Foundations",
+    name: "Claude Certified Developer - Foundations",
     issuer: "Anthropic",
     relevance: "primary",
     badge: true,
@@ -263,5 +271,5 @@ export const certifications: Certification[] = [
 ];
 
 export const awards: string[] = [
-  "Top Scorer in Capstone Evaluation — recognized by VP of Engineering for full-stack capstone work.",
+  "Top Scorer in Capstone Evaluation - recognized by VP of Engineering for full-stack capstone work.",
 ];
